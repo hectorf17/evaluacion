@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+    <link rel="stylesheet" href="estilo5.css">
+</head>
+
+<body>
+    <main>
+        <h1>EVALUACIÓN PARCIAL</h1>
+        <div id="caso">
+            <img src="imgs/cap5.png" height="300" alt="caso">
+        </div>
+        <div id="solucion">
+            <script>
+                // Declaración de variables
+                var precio_persona, seguro_persona = 140, traslado_persona = 150;
+                var pack_turistico, cant_personas, forma_pago;
+                var costo_pack, costo_seguro, costo_traslado, subtotal, impuesto, total, dsct, pago_final;
+
+                // Fase de lectura
+                pack_turistico=prompt("Ingrese el paquete turístico [Colca, Cusco, Mancora, otro]:");
+                cant_personas= parseInt(prompt("Ingrese la cantidad de personas:"));
+                forma_pago= prompt("Ingrese la forma de pago [contado, tarjeta, transferencia]:");
+        
+               //precio por persona segun paquete turistico
+                    switch(pack_turistico.toLowerCase()) {
+                    case "colca":
+                        precio_persona = 550;
+                        break;
+                    case "cusco":
+                        precio_persona = 700;
+                        break;
+                    case "mancora":
+                        precio_persona = 450;
+                        break;
+                    default:
+                        precio_persona = 440;
+                        break;
+                }
+                
+                // Fase de procesamiento
+                costo_pack = precio_persona * cant_personas;
+                costo_seguro = seguro_persona * cant_personas;
+                costo_traslado = traslado_persona* cant_personas;
+                subtotal = costo_pack + costo_seguro + costo_traslado;
+                impuesto = 0.02 * costo_pack;
+                total = subtotal + impuesto;
+
+                //dscto segun la forma de pago
+                if (forma_pago.toLowerCase() === "contado") {
+                    dsct = 0.10 * total;
+                } else if (forma_pago.toLowerCase() === "tarjeta") {
+                    dsct = 0.05 * total;
+                } else {
+                    dsct = 0;
+                }
+                pago_final = total - dsct;
+
+                // Fase de salida
+                document.write("Paquete turístico: " + pack_turistico + "<br>");
+                document.write("Cantidad de personas: " + cant_personas + "<br>");
+                document.write("Forma de pago: " + forma_pago + "<br>");
+                document.write("Costo del paquete: S/. " + costo_pack.toFixed(2) + "<br>");
+                document.write("Costo del seguro: S/. " + costo_seguro.toFixed(2) + "<br>");
+                document.write("Costo de traslados: S/. " + costo_traslado.toFixed(2) + "<br>");
+                document.write("Impuesto: S/. " + impuesto.toFixed(2) + "<br>");
+                document.write("Total antes del descuento: S/. " + total.toFixed(2) + "<br>");
+                document.write("Descuento aplicado: S/. " + dsct.toFixed(2) + "<br>");
+                document.write("Pago final: S/. " + pago_final.toFixed(2));
+            </script>
+        </div>
+    </main>
+</body>
+
+</html>

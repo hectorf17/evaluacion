@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>EVALUACIÓN PARCIAL</h1>
+        <div id="caso">
+            <img src="imgs/cap2.png" height="200" alt="caso">
+        </div>
+        <div id="solucion">
+            <script>
+                //Declaracion de variables
+                var num_hr, sol_hr, sueldo_mens;
+
+                //Fase de lectura
+                num_hr = parseInt(prompt("Ingrese el numero de horas que trabaja durante el mes"));
+                sol_hr = parseFloat(prompt("Ingrese los soles por hora que gana"));
+
+
+
+                //Fase de procesamiento
+                if (num_hr <= 50) {
+                    sueldo_mens = num_hr * sol_hr;
+                } else {
+                    sueldo_mens = (50*sol_hr)+((num_hr-50)+(sol_hr*1.6));
+                }
+
+                //Fase de salida
+                document.write("El sueldo correspondiente es: S/."+sueldo_mens);
+
+
+
+
+            </script>
+        </div>
+    </main>
+</body>
+
+</html>

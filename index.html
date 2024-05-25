@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>EVALUACIÓN PARCIAL</h1>
+        <div id="caso">
+            <img src="imgs/cap1.png" height="200" alt="caso">
+        </div><s></s>
+        <div id="solucion">
+            <script>
+                //Declaracion de variables
+                var precio_uni = 60, num_camisas, importe_compra, dsct, dsct_aplicado, costo_final;
+
+                //Fase de lectura
+                num_camisas = parseInt(prompt("Ingrese el numero de camisas compradas"));
+
+                //Fase de procesamiento
+                if (num_camisas >= 3) {
+                    dsct = 0.10
+                }else{
+                    
+                }
+                importe_compra = num_camisas * precio_uni;
+                dsct_aplicado = importe_compra * dsct;
+                costo_final = importe_compra - dsct_aplicado;
+
+                //Fase de salida
+                document.write("Numero de de camisas compradas: " + num_camisas + "<br>");
+                document.write("Importe de la compra: s/." + importe_compra.toFixed(2) + "<br>");
+                document.write("Descuento aplicado: s/." + dsct_aplicado.toFixed(2) + "<br>");
+                document.write("Costo final a pagar: s/." + costo_final.toFixed(2));
+            </script>
+        </div>
+    </main>
+</body>
+
+</html>

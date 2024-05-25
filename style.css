@@ -1,0 +1,22 @@
+main{
+    border: 5px solid black;
+    width: 75%;
+    margin: 20px auto;
+    background-color: rgb(154, 255, 247);
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    color: black;
+    size: 70%;
+}
+#caso{text-align: center;}
+
+#solucion{
+    height:150px;
+    border: 2px solid rgb(0, 0, 0);
+    width: 75%;
+    margin:auto;
+    background-color: rgb(255, 255, 255);
+    font-size: 30px;
+    }

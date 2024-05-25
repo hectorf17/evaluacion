@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>EVALUACIÓN PARCIAL</h1>
+        <div id="caso">
+            <img src="imgs/cap4.png" alt="caso">
+        </div>
+        <div id="solucion">
+            <script>
+                //Declaracion de variables
+                var opcion, area, lado, base, altura, radio;
+
+                //Opcion
+                opcion = parseInt(prompt("Ingrese la opcion para calcular el area:[1-Cuadrado][2-Rectangulo][3-Triangulo][4-circulo]"));
+
+                //Solicitud de opcion
+                if (opcion === 1) {
+                    lado = parseFloat(prompt("Ingrese el lado del cuadrado"));
+                    area = lado * lado;
+                    document.write("El area del cuadrado es: " + area + "<br>");
+                } else if (opcion === 2) {
+                    base = parseFloat(prompt("Ingrese la base del rectangulo"));
+                    altura = parseFloat(prompt("Ingrese la altura del rectangulo"));
+                    area = base * altura;
+                    document.write("El area del rectangulo es: " + area + "<br>");
+                } else if (opcion === 3) {
+                    base = parseFloat(prompt("Ingrese la base del triangulo"));
+                    altura = parseFloat(prompt("Ingrese la altura del triangulo"));
+                    area = (base * altura) / 2;
+                    document.write("El area del triangulo es: " + area + "<br>");
+                } else if (opcion === 4) {
+                    radio = parseFloat(prompt("Ingrese el radio del circulo"));
+                    area = Math.PI * radio * radio;
+                    document.write("El area del circulo es: " + area.toFixed(2) + "<br>");
+                } else {
+                    document.write("Operacion no permitida");
+                }
+
+            </script>
+        </div>
+    </main>
+</body>
+
+</html>

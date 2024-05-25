@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>EVALUACIÓN PARCIAL</h1>
+        <div id="caso">
+            <img src="imgs/cap3.png" alt="caso">
+        </div><s></s>
+        <div id="solucion">
+            <script>
+        //Declaracion de variables
+        var edad,msj;
+
+        //Fase de lectura
+        edad=parseInt(prompt("Ingrese la edad"));
+
+        //Fase de procesamiento
+        if (edad>=0 && edad<=10) {
+            msj="Es un niño";
+        } else if (edad>10 && edad<=15){
+            msj="Es un puber";
+        } else if (edad>15 && edad<=19){
+            msj="Es un adolescente";
+        } else if (edad>19 && edad <=26) {
+            msj="Es un joven";
+        } else if (edad>26 && edad<=65){
+            msj="Es un adulto";
+        } else {
+            msj="Es un anciano";
+        }
+            
+        //Fase de salida
+
+        document.write("La edad es: "+edad+"<br>");
+        document.write(msj);
+        
+            </script>
+        </div>
+    </main>
+</body>
+
+</html>
